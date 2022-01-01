@@ -2,4 +2,4 @@ _R_CHECK_LENGTH_1_CONDITION_=verbose
 _R_CHECK_LENGTH_1_LOGIC2_=verbose
 R_GSCMD="/opt/homebrew/bin/gs"
 PKG_CONFIG_PATH=/opt/X11/lib/pkgconfig
-GITHUB_PAT=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
+
