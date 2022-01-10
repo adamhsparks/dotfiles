@@ -85,5 +85,3 @@ export PATH="/opt/homebrew/opt/ccache/libexec:$PATH"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 test -r "~/.dir_colors" && eval $(dircolors ~/.dir_colors)
-
-export GITHUB_TOKEN="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"
