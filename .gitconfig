@@ -1,0 +1,28 @@
+[user]
+	email = adamhsparks@icloud.com
+	name = Adam H. Sparks
+	signingkey = BDD25FA0
+[commit]
+	gpgsign = true
+	template = /Users/adamsparks/.stCommitMsg
+[tag]
+	forceSignAnnotated = true
+[core]
+	editor = nvim
+	excludesfile = /Users/adamsparks/.gitignore_global
+[pull]
+	ff = only
+[credential]
+	helper = osxkeychain
+[github]
+	user = adamhsparks
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[gpg]
+	program = /usr/local/bin/gpg
+[init]
+	defaultBranch = main
