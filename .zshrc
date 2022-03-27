@@ -110,9 +110,12 @@ alias vi="nvim"
 alias vim="nvim"
 alias view="nvim -R"
 alias vimdiff="nvim -d"
+alias fdsx='ssh -X -i $HOME/.ssh/DPIRD_mbPro_key.pem ubuntu@146.118.68.148'
 
 disable r
 alias r="radian"
+alias R='R --no-save'
+alias julia='julia --threads 4' # start julia with 4 threads
 
 # PATH modifications
 export PATH=$HOME/.local/bin:$HOME/Library/Python/3.9/bin:/usr/local/bin:/opt/homebrew/bin:/opt/homebrew/bin/python3:$PATH
@@ -143,3 +146,4 @@ export GPG_TTY=$TTY
 
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 (( ! ${+functions[p10k]} )) || p10k finalize
+RICH_THEME=nord
