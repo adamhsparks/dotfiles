@@ -28,9 +28,62 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+    git
+    colorize
+	zsh-autosuggestions
+	z
+	zsh-syntax-highlighting
+    github
+)
 
 source $ZSH/oh-my-zsh.sh
+if [ -f ${HOME}/.zplug/init.zsh ]; then
+    source ${HOME}/.zplug/init.zsh
+fi
+source ~/.zplug/init.zsh
+
+
+# Use the package as a command
+# And accept glob patterns (e.g., brace, wildcard, ...)
+zplug "Jxck/dotfiles", as:command, use:"bin/{histuniq,color}"
+
+
+zplug aperezdc/zsh-fzy
+
+# Load if "if" tag returns true
+zplug "lib/clipboard", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]"
+
+# Load "emoji-cli" if "jq" is installed in this example
+zplug "stedolan/jq", \
+    from:gh-r, \
+    as:command, \
+    rename-to:jq
+zplug "b4b4r07/emoji-cli", \
+    on:"stedolan/jq"
+# Note: To specify the order in which packages should be loaded, use the defer
+#       tag described in the next section
+
+# Set the priority when loading
+# e.g., zsh-syntax-highlighting must be loaded
+# after executing compinit command and sourcing other plugins
+# (If the defer tag is given 2 or above, run after compinit command)
+zplug "zsh-users/zsh-syntax-highlighting", defer:2
+
+# Can manage local plugins
+zplug "~/.zsh", from:local
+
+# Install plugins if there are plugins that have not been installed
+if ! zplug check --verbose; then
+    printf "Install? [y/N]: "
+    if read -q; then
+        echo; zplug install
+    fi
+fi
+
+zplug "changyuheng/fz", defer:1
+zplug "rupa/z", use:z.sh       # Then, source plugins and add commands to $PATH
+zplug load
 
 # User configuration
 
@@ -85,3 +138,8 @@ export PATH="/opt/homebrew/opt/ccache/libexec:$PATH"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 test -r "~/.dir_colors" && eval $(dircolors ~/.dir_colors)
+
+export GPG_TTY=$TTY
+
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+(( ! ${+functions[p10k]} )) || p10k finalize
