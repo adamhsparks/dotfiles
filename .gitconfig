@@ -6,3 +6,24 @@
 	signingkey = 1C0A8A93B8C324B5
 	name = Adam H. Sparks
 	email = adamhsparks@gmail.com
+[user]
+	email = adamhsparks@gmail.com
+	name = Adam Sparks
+	signingkey = 73C30D5F0466CDAC
+[commit]
+	gpgsign = true
+[tag]
+	forceSignAnnotated = true
+[core]
+	editor = nvim
+	excludesfile = /Users/adamsparks/.gitignore_global
+[pull]
+	ff = only
+[credential]
+	helper = osxkeychain
+[github]
+	user = adamhsparks
+[init]
+	defaultBranch = main
+[gpg]
+	program = /usr/local/bin/gpg
