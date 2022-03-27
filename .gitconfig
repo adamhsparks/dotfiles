@@ -1,0 +1,8 @@
+[gpg]
+	program = gpg
+[commit]
+	gpgsign = true
+[user]
+	signingkey = 1C0A8A93B8C324B5
+	name = Adam H. Sparks
+	email = adamhsparks@gmail.com
