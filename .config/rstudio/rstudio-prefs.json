@@ -21,8 +21,7 @@
             "Help",
             "Build",
             "VCS",
-            "Viewer",
-            "Presentations"
+            "Viewer"
         ],
         "hiddenTabSet": [],
         "console_left_on_top": false,
