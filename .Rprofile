@@ -1,4 +1,3 @@
-
 options(
   # scientific notation -----
   "scipen" = 100L,
@@ -52,10 +51,8 @@ if (interactive() &&
   }, delay = 1)
 }
 
+
+credentials::set_github_pat()
+
 # git prompt setup -----
-#prompt::set_prompt(function(...) {
-#  branch <- (purrr::safely(gert::git_branch))()
-#  if (is.null(branch$result))
-#    return("> ")
-#  return(paste0("[", branch$result, "] > "))
-#})
+# if (interactive()) prompt::set_prompt(prompt::prompt_fancy) 
