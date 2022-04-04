@@ -111,6 +111,7 @@ alias vim="nvim"
 alias view="nvim -R"
 alias vimdiff="nvim -d"
 alias fdsx='ssh -X -i $HOME/.ssh/DPIRD_mbPro_key.pem ubuntu@146.118.68.148'
+alias more="rich"
 
 disable r
 alias r="radian"
