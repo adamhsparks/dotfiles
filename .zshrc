@@ -125,7 +125,7 @@ export PATH=$HOME/.local/bin:$HOME/Library/Python/3.9/bin:/usr/local/bin:/opt/ho
 #export PATH=$HOME/Development/Github/julia:$PATH
 
 # for some reason the R installation is not found, export path
-export PATH=/Library/Frameworks/R.framework/Resources:$PATH
+#export PATH=/Library/Frameworks/R.framework/Resources:$PATH
 export DYLD_LIBRARY_PATH=/opt/Homebrew/lib
 export LDFLAGS="-L/opt/homebrew/include"
 export CFLAGS="-I/opt/homebrew/include"
@@ -148,3 +148,5 @@ export GPG_TTY=$TTY
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 (( ! ${+functions[p10k]} )) || p10k finalize
 RICH_THEME=nord
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

@@ -3,11 +3,9 @@
 [commit]
 	gpgsign = true
 [user]
-	signingkey = 1C0A8A93B8C324B5
 	name = Adam H. Sparks
 	email = adamhsparks@gmail.com
-	signingkey = 73C30D5F0466CDAC
-	signingKey = 2289E40699D2BD64F468A0372A6CFFAAF4A43F7E
+	signingkey = 1C0A8A93B8C324B5
 [commit]
 	gpgsign = true
 [tag]
